@@ -1,0 +1,31 @@
+//
+//  Responsive Mix-in
+//  ---------------------------------------------
+
+.resMin(
+    @minWidth;
+    @rules
+) {
+    @media only screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+.resMax(
+    @maxWidth;
+    @rules
+) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.resBetween(
+    @minWidth;
+    @maxWidth;
+    @rules
+) {
+    @media only screen and (min-width: @minWidth) and (max-width: (@maxWidth - 1)) {
+        @rules();
+    }
+}
